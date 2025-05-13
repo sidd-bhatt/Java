@@ -1,10 +1,7 @@
 public class RemoveAdjacentDuplicates {
     public static void main(String[] args) {
-        String str = "geeksforgeek";
-        char[] chr = removeAdjacentDuplicates(str);
-        for(char c: chr){
-            System.out.print(c);
-        }
+        String str = "aaaaaaaavvfghghg";
+        System.out.println(removeAdjacentDuplicates(str));
 
     }
     private static String removeAdjacentDuplicates(String str){
@@ -13,14 +10,13 @@ public class RemoveAdjacentDuplicates {
             return str;
         }
         StringBuilder sb = new StringBuilder();
-        int length = str.length();
         int i = 0;
         //We'll loop across the string.
-        while(i<length){
+        while(i<str.length()){
             //Make one comparing pointer.
             int j = i;
             //This loop will pass through the adjacent duplicates, if found.
-            while(j+1 < length && str.charAt(i) == str.charAt(j+1)){
+            while(j+1 < str.length() && str.charAt(i) == str.charAt(j+1)){
                 j++;
             }
             //This is when the next character is not duplicate, we'll keep that.
@@ -39,6 +35,5 @@ public class RemoveAdjacentDuplicates {
         }
         //If condition fails that mean there is a possibility of duplicate, again do the process.
         return removeAdjacentDuplicates(newString);
-
     }
 }

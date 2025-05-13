@@ -1,4 +1,4 @@
-public class ReverseString {
+public class ReverseWordsInString {
     public static void main(String[] args) {
         String str = "Listen my home is the most peaceful place I can be";
         System.out.println(reverse(str));

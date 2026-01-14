@@ -1,4 +1,17 @@
 public class Palindrome {
+    /*
+     * A palindrome is symmetric around its center. The center can be:
+     * 1) A single character (odd-length palindromes, e.g., "aba")
+     * 2) The gap between two characters (even-length palindromes, e.g., "abba")
+     *
+     * For each index in the string, the algorithm treats it as a potential center
+     * and expands outward in both directions while the characters match.
+     * The longest palindrome found during this process is tracked and returned.
+     *
+     * This approach avoids checking all substrings and runs in O(n²) time
+     * with O(1) extra space.
+     */
+
     public static String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
         int start = 0, end = 0;

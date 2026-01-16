@@ -1,0 +1,6 @@
+ABSTRACT FACTORY
+
+=> For FAMILY of objects
+=> Produce family of related objects without specifying concrete class
+=> Its is an interface that defines methods to create family of related objects, where each object is accessed through
+    its own interface.

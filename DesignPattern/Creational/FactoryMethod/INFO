@@ -1,0 +1,8 @@
+FACTORY METHOD
+
+=> For one type of object
+=> Generally factory method's class is called Creator class and is 'abstract' class.
+=> There is one interface of object eg - Vehicle.
+=> There are concrete classes that defined multiple types of same object eg - Car, Truck, Bike.
+=> There are concrete classes that override and define the factory method of Creator class by returning instance of
+    concrete object classes.

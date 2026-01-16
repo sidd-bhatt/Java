@@ -1,0 +1,21 @@
+PROTOTYPE
+
+=> This creational design pattern allows us to copy existing object or make a copy of existing object without being
+    dependent upon the classes of the object.
+=> Prototype approach allows efficient duplication without repeating costly initialization.
+=> Lets say I want to make a copy of existing object. I will create a new object of same class. I will have to go
+    through all the field of the original object and copy their values in new object (dependency).
+=> But what if some of the fields of the object are private and not visible from out side the object class. This
+    problem is solved by Prototype.
+=> To implement this design pattern we use Cloneable interface. Cloneable is marker interface. It marks a class -
+    'safe to clone'.
+=> Code includes:
+    * Prototype interface:
+        * defines the method for cloning objects
+        * sets a standard that all concrete prototypes must follow
+        * includes a clone method that concrete prototypes will implement to create copies of
+        themselves.
+    * Concrete Prototype:
+        * implements the prototype interface
+        * represents a specific type of object that can be cloned
+    * Client: code or module that requests new object creation by interacting with the prototype

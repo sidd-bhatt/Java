@@ -1,0 +1,14 @@
+BUILDER
+
+=> This design pattern lets us construct complex object step by step.
+=> Lets say an object has many properties. Example: House is object and it has - floor, door, window, wall, roof,
+    balcony, chimney, bathroom, restroom, drawing room, etc. Now someone might be interested in having all, someone
+    might be interested having floor, door, window, wall, roof only.
+=> Core idea is -
+    * A class acting as POJO class defins all the properties of the object.
+    * A Builder interface defined method to build(set) the properties of the object.
+    * The return type of those method is of Builder type (Fluent Chaining/ Fluent Interface).
+    * The Builder interface define build() method also which returns the whole built object.
+    * There are Concrete Builder classes that customize all or some properties of the object.
+    * Client can instantiate those custom concreete builder classes and step by step set the property of the object.
+    * In the end call build().
